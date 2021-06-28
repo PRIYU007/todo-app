@@ -115,7 +115,8 @@ const StyledTodo = styled.div`
       border: #00ff00 solid 2px;
       transition: all 0.7s ease;
       color: #fff;
-      width: 5%;
+      width: 6%;
+      height: 6%;
       &:hover {
         background: #00ff00;
         color: #000;
