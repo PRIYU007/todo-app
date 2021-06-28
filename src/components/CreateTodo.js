@@ -56,9 +56,10 @@ const StyledForm = styled.form`
     }
   }
   @media only screen and (min-width: 320px) and (max-width: 479px) {
+    width: 90%;
     input {
-      padding: 1rem;
-      font-size: 1.2rem;
+      padding: 1.2rem;
+      font-size: 1.3rem;
     }
     button {
       padding: 1rem;

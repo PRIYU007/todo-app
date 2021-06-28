@@ -24,11 +24,12 @@ const Todo = ({ stateTodo, input, setInput, todos, setTodos }) => {
     setEditState(!editState);
 
     if (editState) {
-      todos.map(todo =>
-        todo.message !== stateTodo.message
+      todos.map(todo => {
+        if (todo.id !== stateTodo.id) return undefined;
+        return todo.message !== stateTodo.message
           ? (todo.message = setNewInput(newInput))
-          : ''
-      );
+          : '';
+      });
     }
   };
   const deleteHandler = () => {
