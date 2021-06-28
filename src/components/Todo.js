@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { useState, useRef, useFocus } from 'react';
+import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheck, faEdit, faTrashAlt } from '@fortawesome/free-solid-svg-icons';
 
@@ -25,7 +25,9 @@ const Todo = ({ stateTodo, input, setInput, todos, setTodos }) => {
 
     if (editState) {
       todos.map(todo =>
-        todo.id === stateTodo.id ? (todo.message = setNewInput(newInput)) : ''
+        todo.message !== stateTodo.message
+          ? (todo.message = setNewInput(newInput))
+          : ''
       );
     }
   };
@@ -118,6 +120,12 @@ const StyledTodo = styled.div`
         color: #000;
         border: solid 2px #333;
       }
+    }
+  }
+  @media only screen and (min-width: 320px) and (max-width: 479px) {
+    .visible button {
+      width: 12%;
+      text-align: center;
     }
   }
 `;

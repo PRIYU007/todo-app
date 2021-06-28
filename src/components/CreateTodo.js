@@ -1,7 +1,5 @@
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
-import { useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
 const CreateTodo = ({ input, setInput, setTodos, todos }) => {
@@ -57,5 +55,16 @@ const StyledForm = styled.form`
       border: solid 2px #00ff00;
     }
   }
+  @media only screen and (min-width: 320px) and (max-width: 479px) {
+    input {
+      padding: 1rem;
+      font-size: 1.2rem;
+    }
+    button {
+      padding: 1rem;
+      width: 30%;
+    }
+  }
 `;
+
 export default CreateTodo;
